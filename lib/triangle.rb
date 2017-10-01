@@ -1,14 +1,14 @@
 class Triangle
   attr_accessor :a, :b, :c
 
-  def initialize
+  def initialize(a, b, c)
     @a = a
     @b = b
     @c = c
   end
 
   def kind
-    if (@a + @b) <= @c || @a + @c <= @b || @b + @c <= @a || self.any? <= 0
+    if (@a + @b) <= @c || @a + @c <= @b || @b + @c <= @a 
       raise TriangleError
     elsif @a == @b == @c
       :equilateral
